@@ -6,9 +6,9 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
   # rabbitmq
-  config.vm.network :forwarded_port, guest: 5671, host: 5671
-  config.vm.network :forwarded_port, guest: 5672, host: 5672
-  config.vm.network :forwarded_port, guest: 15671, host: 15671
+  config.vm.network :forwarded_port, guest: 5671, host: 5671, auto_correct: true
+  config.vm.network :forwarded_port, guest: 5672, host: 5672, auto_correct: true
+  config.vm.network :forwarded_port, guest: 15671, host: 15671, auto_correct: true
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
