@@ -57,7 +57,7 @@ class rabbitmq-server {
   class { "::rabbitmq":
     service_manage    => false,
     delete_guest_user => true,
-    port              => "5672",
+    port              => 5672,
     admin_enable      => true,
     management_port   => 15672,
     ssl               => true,
